@@ -28,8 +28,31 @@
             align-items: center;
             background-color: #f1e6e2;
         }
-    </style>
+
+        button{
+            font-size: 1rem;
+            width: 7rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #email{
+            font-size: 1rem;
+            color: blue;
+            margin-top: 1rem;
+                        
+        }
+
+        #nome{
+            font-size: 1rem;
+            color: blue;
+            
+        }
+    </style>    
+
     <head>
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,10 +60,19 @@
 
     </head>
     <body>
+        
         <img src="https://img.elo7.com.br/product/original/33DD86A/adesivo-personalizado-para-parede-anime-chihiro-filmes.jpg" alt="Chihiro" />
         <h1>Sobre mim</h1>
         <hr size: "3" width="50%" color="gray"/>
         <p>Olá, Sou Moacir! Tenho 25 anos, sou formado em Arquitetura e Urbanismo, mas hoje tento a carreira na área de TI. Gosto muito de séries, filmes e música e tenho como hobbie a fotografia.</p>
+
+        <hr size: "3" width="50%" color="gray"/>
+        <h1>Insira seu nome e email:</h1>
+        <input id="nome" type="text" placeholder="Digite seu nome"/>
+        <input id="email" type="text" placeholder="Digite seu email">
+        <button id="botão">Cadastrar</button>
+        <hr size: "3" width="50%" color="gray"/>
+
         <h1>Séries favoritas:</h1>
         <hr size: "3" width="50%" color="gray"/>
         <ul>
@@ -70,5 +102,24 @@
         <br>
         <a data-flickr-embed="true" href="https://www.flickr.com/photos/157217585@N08/51910542043/in/dateposted-public/" title="IMG_20190725_184716_276"><img src="https://live.staticflickr.com/65535/51910542043_bb9b9d7e47_k.jpg" width="2048" height="1536" alt="IMG_20190725_184716_276"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
         <br>
+
+        <script>
+            const componente_button = document.getElementById("botão");
+            const componente_nome = document.getElementById("nome");
+            const componente_email = document.getElementById("email");
+            
+            
+            componente_button.onclick = () => {const nome = componente_nome.value;
+            const email = componente_email.value;
+            
+
+            const mensagem = "Olá, " + nome +"! Obrigado por cadastrar seu email ("+email+").";
+
+            console.log(mensagem)
+            alert(mensagem)
+
+            }
+        </script>
+
     </body>
 </html>
